@@ -8,5 +8,11 @@
 </head>
 <body>
 	<h3>Recursos Avançados em Java</h3>
+	
+	<table>
+		<tr>
+			<td><a href="pages/capturarExececoes.jsp">Capturar execeções</a></td>
+		</tr>
+	</table>
 </body>
 </html>
