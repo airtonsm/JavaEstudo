@@ -10,13 +10,22 @@
 </head>
 <body>
 <h3>Capturar Execeções com JQuery</h3>
-<input type="text" value="teste dados" id="txtvalor">
-<input type="button" onclick="testeJquery();" value="testar">
+<input type="text" value="valor informado" id="txtvalor">
+<input type="button" onclick="testeExcecao();" value="testeExcecao">
 </body>
 
 <script type="text/javascript">
-	function testeJquery() {
-		alert($('#txtvalor').val());
+	function testeExcecao() {
+		 valorInformado =  $('#txtvalor').val();
+		 
+		 $.ajax({
+			 method: "POST",
+			 url: "capturarExcecoes", //para qual servelt?
+			 data: {valorParam: valorInformado}
+		 })
+		 	.always(function(response) {// sempre captar o retorno
+		 		alert(response);				
+			});
 	}
 </script>
 </html>
