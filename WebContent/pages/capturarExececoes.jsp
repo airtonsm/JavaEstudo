@@ -29,10 +29,10 @@
 		 	// fazer algo
 			})
 			.fail(function(xhr, status, errorThrown) {
-				alert("Error: " + errorThrown);//xhr.responseText
+				alert("Error: " + xhr.responseText);//mostra a resposta do servidor
 				
 				// fazer algo se der errado
-			})	;		 
+			})	;		 	
 	}
 	
 </script>
