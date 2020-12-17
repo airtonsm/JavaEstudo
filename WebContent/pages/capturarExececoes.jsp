@@ -12,6 +12,7 @@
 <h3>Capturar Execeções com JQuery</h3>
 <input type="text" value="valor informado" id="txtvalor">
 <input type="button" onclick="testeExcecao();" value="testeExcecao">
+
 </body>
 
 <script type="text/javascript">
@@ -23,9 +24,16 @@
 			 url: "capturarExcecoes", //para qual servelt?
 			 data: {valorParam: valorInformado}
 		 })
-		 	.always(function(response) {// sempre captar o retorno
-		 		alert(response);				
-			});
+		 	.done(function(response) {// resposta ok - nenhum erro
+		 		alert("Sucesso! " + response);
+		 	// fazer algo
+			})
+			.fail(function(xhr, status, errorThrown) {
+				alert("Error: " + errorThrown);//xhr.responseText
+				
+				// fazer algo se der errado
+			})	;		 
 	}
+	
 </script>
 </html>
