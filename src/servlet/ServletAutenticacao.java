@@ -39,13 +39,15 @@ public class ServletAutenticacao extends HttpServlet {
 			userLogado.setLogin(login);
 			userLogado.setSenha(senha);
 			
+			String url = request.getParameter("url");
+			
 			// adiciona usuario logado na sessão
 			HttpServletRequest req = (HttpServletRequest) request;
 			HttpSession session = req.getSession();
 			session.setAttribute("usuario", userLogado);
 			
 			//redirecionar para o sistema e autorizar
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/acessoAoSistema.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 			dispatcher.forward(request, response);
 		}else {
 			// redirecionar para login novamente caso login falhar
