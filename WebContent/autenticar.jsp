@@ -20,9 +20,11 @@
 				<td>Senha:</td>
 				<td><input type="password" id="senha" name="senha"></td>
 			</tr>
+			
 			<tr>
 				<td><input type="submit" id="logar" name="logar" value="Logar"></td>
-			</tr>
+			</tr>			
+			
 		</table>
 
 	</form>

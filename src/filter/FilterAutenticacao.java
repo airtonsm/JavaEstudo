@@ -29,8 +29,8 @@ public class FilterAutenticacao implements Filter{
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {	
 		
-		HttpServletRequest req = (HttpServletRequest) request;
-		HttpSession session = req.getSession();
+			HttpServletRequest req = (HttpServletRequest) request;
+			HttpSession session = req.getSession();
 		
 		String urlParaAutenticar = req.getServletPath();
 		
