@@ -7,6 +7,6 @@
 <title>Página filha load</title>
 </head>
 <body>
-	<h3>Esta página está sendo carregada com ajax!!</h3>
+	<h3>Esta página está sendo carregada com jQuery em ajax</h3>
 </body>
 </html>

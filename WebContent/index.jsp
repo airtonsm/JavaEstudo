@@ -23,6 +23,10 @@
 		</tr>
 		
 		<tr>
+			<td><a href="pages/progessbar.jsp">Progress Bar</a></td>
+		</tr>
+		
+		<tr>
 			<td><a href="pages/ServletAutenticacao?deslogar=true">Deslogar</a></td>
 		</tr>
 		
