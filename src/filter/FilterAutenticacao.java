@@ -48,7 +48,6 @@ public class FilterAutenticacao implements Filter{
 		//executa as ações de request e response
 		chain.doFilter(request, response);
 		
-		System.out.println("Interceptando");
 	}
 	
 	// executa alguma coisa quando a aplicação for iniciada;

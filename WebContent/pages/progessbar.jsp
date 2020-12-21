@@ -88,6 +88,7 @@
 		});
 
 		//script da barra de progresso por JS
+		
 		function exibirBarra() {
 			var elem = document.getElementById("myBar");
 			var width = 1;
@@ -102,6 +103,9 @@
 				}
 			}
 		}
+		
+		
+		
 	</script>
 
 </body>
