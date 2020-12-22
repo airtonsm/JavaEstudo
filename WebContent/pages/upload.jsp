@@ -12,7 +12,7 @@
 <body>
 <form enctype="application/x-www-form-urlencoded">
 	<input type="file" id="file" name="file" onchange="uploadFile();" />
-	<img alt="Imagem"  id="target" width="200" height="200">
+	<img alt="Imagem" id="target" width="200" height="200">
 	</form>
 </body>
 
@@ -31,7 +31,7 @@
 			
 			$.ajax({
 				 method: "POST",
-				 url: "fileUpload", //para qual servelt
+				 url: "FileUpload", //para qual servelt
 				 data: { fileUpload : reader.result }
 			 }).done(function(response) {// resposta ok - nenhum erro
 			 		alert("Sucesso! " + response);
@@ -42,6 +42,12 @@
 				});
 			
 		};
+		
+		if (file) {
+			reader.readAsDataURL(file); 
+		} else {
+			target.src = "";
+		}
 
 	}
 </script>

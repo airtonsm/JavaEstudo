@@ -25,8 +25,7 @@ public class FileUpload extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		doGet(request, response);
+
 		
 		String fileUpload = request.getParameter("fileUpload");
 		System.out.println(fileUpload); //imagem em base 64
