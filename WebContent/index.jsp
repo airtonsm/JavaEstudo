@@ -6,6 +6,9 @@
 <meta charset="ISO-8859-1">
 <title>Recursos avançados em Java</title>
 </head>
+<style>
+	
+</style>
 <body>
 	<h3>Recursos Avançados em Java</h3>
 	
@@ -23,7 +26,7 @@
 		</tr>
 		
 		<tr>
-			<td><a href="pages/progessbar.jsp">Progress Bar</a></td>
+			<td><a href="pages/progessbar.jsp">Barra de progresso</a></td>
 		</tr>
 		
 		<tr>

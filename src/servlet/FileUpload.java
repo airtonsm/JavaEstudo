@@ -27,7 +27,7 @@ public class FileUpload extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 		//usar variavel fileupload para salvar no banco de dados
-		String fileUpload = request.getParameter("fileUpload");
+		//String fileUpload = request.getParameter("fileUpload"); - imprimi base 64 da imagem no console
 		// neste momento faz insert no banco de dados
 		
 		response.getWriter().write("Upload realizado com sucesso!!!");
