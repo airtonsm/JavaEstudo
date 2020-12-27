@@ -29,34 +29,31 @@ public class CarregarDadosDataTable extends HttpServlet {
 		try {
 
 			List<Usuario> usuarios = daoUsuario.getUsuarios();
+		
 			if (!usuarios.isEmpty()) {
+				
+				String data = "";
+				int totalUsuario = usuarios.size();	
+				int index = 1;
+				
+				for (Usuario usuario : usuarios) {
+				
+					data += " [" 
+							+ "\"" +usuario.getId() +"\", "
+							+ "\""+usuario.getLogin()+"\"" 
+							+ "]";	
+					if(index < totalUsuario) {
+						data += ",";
+					}
+					index ++;
+				}
 
-				String json = "{" + "\"draw\": 1, " 
-				+ "\" recordsTotal\": " 
-						+ usuarios.size() + ", "
-						+ "\"recordsFiltered\":" 
-						+ usuarios.size() + ", " 
-						+ "\"data\": [" 
-						
-						//INICIO -  processa a lista de dados
-						+ " [" 
-						+ "\"Airi\","
-						+ "\"Satou\", " 
-						+ "\"Accountant\", " 
-						+ "\"Tokyo\", " + "\"28th Nov 08\", " 
-						+ "\"$162.700\" "
-						+ "]," 						
-						+ "[" 
-						+ "\"Cedric\","
-						+ "\"Kelly\"," 
-						+ "\"Senior Javascript Developer\","
-						+ "\"Edinburgh\"," 
-						+ "\"29th Mar 12\","
-						+ "\"$433,060\"" + "]" 
-						
-						// teste git eclipse
-						+ "]" 
-						+ "}";
+				String json = "{" 
+				+ "\"draw\": 1, " 
+				+ "\" recordsTotal\": "	+ usuarios.size() + ", "
+						+ "\"recordsFiltered\":" + usuarios.size() + ", " 
+						+ "\"data\": [" + data + "]"  // fechamento data
+						+ "}"; // fechamento json
 
 				response.setStatus(200); // resposta completa ok
 				response.getWriter().write(json); // json de resposta (escreve a resposta http)
