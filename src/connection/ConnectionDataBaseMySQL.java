@@ -5,13 +5,13 @@ import java.sql.DriverManager;
 
 /*
  * Realiza conexão com banco de dados
- * Conexão Postgresql para o banco testes
+ * Conexão MySQL para o banco testes
  * @author Airton
   */
-public class ConnectionDataBase {
+public class ConnectionDataBaseMySQL {
 	
-	private static String banco = "jdbc:postgresql://localhost:5432/testes?autoReconnect=true";
-	private static String user = "postgres";
+	private static String banco = "jdbc:mysql://localhost:3306/testes?autoReconnect=true";
+	private static String user = "root";
 	private static String password = "admin";
 	private static Connection connection = null;
 	
@@ -19,7 +19,7 @@ public class ConnectionDataBase {
 		conectar();
 	}
 	
-	public ConnectionDataBase() {
+	public ConnectionDataBaseMySQL() {
 		conectar();
 	}
 	
@@ -27,7 +27,7 @@ public class ConnectionDataBase {
 		
 		try {
 			if(connection == null)	{
-				Class.forName("org.postgresql.Driver");
+				Class.forName("com.mysql.jdbc.Driver");
 				connection = DriverManager.getConnection(banco, user, password);
 			}	
 		}catch (Exception exception) {

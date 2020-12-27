@@ -5,12 +5,12 @@ import java.sql.DriverManager;
 
 /*
  * Realiza conexão com banco de dados
- * Conexão Postgresql para o banco testes
+ * Conexão Postgresql para o banco sistemaferramenta
  * @author Airton
   */
-public class ConnectionDataBase {
+public class ConnectionDataBaseBanco2 {
 	
-	private static String banco = "jdbc:postgresql://localhost:5432/testes?autoReconnect=true";
+	private static String banco = "jdbc:postgresql://localhost:5432/sistemaferramenta?autoReconnect=true";
 	private static String user = "postgres";
 	private static String password = "admin";
 	private static Connection connection = null;
@@ -19,7 +19,7 @@ public class ConnectionDataBase {
 		conectar();
 	}
 	
-	public ConnectionDataBase() {
+	public ConnectionDataBaseBanco2() {
 		conectar();
 	}
 	

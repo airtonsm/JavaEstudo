@@ -15,12 +15,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import connection.ConnectionDataBase;
+import connection.ConnectionDataBaseBanco2;
+import connection.ConnectionDataBaseMySQL;
 import user.UserLogado;
 
 @WebFilter(urlPatterns= {"/pages/*"})
 public class FilterAutenticacao implements Filter{
 	
 	private static Connection connection;
+	private static Connection connectionBanco2;
+	private static Connection connectionBancoMySQL;
+	
 	
 	// faz alguma coisa quando a aplicação é derrubada;
 	@Override
@@ -58,6 +63,11 @@ public class FilterAutenticacao implements Filter{
 	@Override
 	public void init(FilterConfig arg0) throws ServletException{
 		connection = ConnectionDataBase.getConnection();
+		connectionBanco2 = ConnectionDataBaseBanco2.getConnection();
+		connectionBancoMySQL = ConnectionDataBaseMySQL.getConnection();
+		
 	}
+	
+	
 	
 }
