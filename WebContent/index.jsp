@@ -37,6 +37,10 @@
 			<td><a href="pages/datatable.jsp">DataTable jQuery</a></td>
 		</tr>
 		
+		<tr>
+			<td><a href="pages/relatorio.jsp">Relatório</a></td>
+		</tr>
+		
 		
 		
 		<tr>

@@ -17,7 +17,13 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/postgresql-9.1-903.jdbc4.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.49-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Airto/Downloads/jasperreports-6.16.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jasperreports-6.16.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org-apache-commons-logging.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-codec-20041127.091804.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/groovy-2.4.7.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-collections4-4.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

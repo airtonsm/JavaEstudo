@@ -19,7 +19,7 @@ import dao.DaoUsuario;
 import entidades.Usuario;
 import service.RelatorioService;
 
-@WebServlet("/ServletDownloadFile")
+@WebServlet("/pages/ServletDownloadFile")
 public class ServletDownloadFile extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
